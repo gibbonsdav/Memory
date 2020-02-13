@@ -7,6 +7,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  margin: 25px;
+}
+
 #memory {
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +18,7 @@ html {
   align-content: space-between; */
 }
 
-.front {
+.back {
   height: 100px;
   width: 100px;
   background-color: blue;
@@ -24,11 +28,19 @@ html {
   align-content: center;
 }
 
-img {
-  height: 100px;
+.back img {
+  margin: auto;
 }
 
-.back {
+.front img {
+  margin: auto;
+}
+
+img {
+  height: 125px;
+}
+
+.front {
   background-color: black;
   height: 100px;
   width: 100px;
@@ -36,6 +48,7 @@ img {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin: 0px;
 }
 
 #card1,
