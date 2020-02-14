@@ -80,3 +80,27 @@ img {
 
   /* margin-top: 10px; */
 }
+
+#card-1:active,
+#card-2:active,
+#card-3:active,
+#card-4:active,
+#card-5:active,
+#card-6:active,
+#card-7:active,
+#card-8:active,
+#card-9:active {
+  transform: scale(0.8);
+}
+
+#card1:active,
+#card2:active,
+#card3:active,
+#card4:active,
+#card5:active,
+#card6:active,
+#card7:active,
+#card8:active,
+#card9:active {
+  transform: scale(0.8);
+}
