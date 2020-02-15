@@ -82,17 +82,78 @@ console.log(cards)
 $("#memory").html(cards)
 $("#memory")
   .find(".card")
-  .flip() /
-  $("#memory").on("click", ".card", function(e) {
-    e.preventDefault()
-    if (card1) {
-      card2 = $(this)
-      if (card1.find(".front").html() === card2.find(".front").html()) {
-      } else {
-        card1.flip()
-        card2.flip()
-      }
-    } else {
-      card1 = $(this)
-    }
-  })
+  .flip()
+
+const state = {
+  card1: null,
+  card2: null
+}
+
+$("#memory").on("click", ".card", function(e) {
+  console.log($(this).data("value"))
+
+  if (state.card1 === null) {
+    state.card1 = $(this)
+  } else {
+    state.card2 = $(this)
+
+    console.log(state)
+
+    setTimeout(() => {
+      state.card1.flip(false)
+      state.card2.flip(false)
+    }, 1000)
+
+    // if (state.card1 === state.card2) {
+    //   // we have a match
+
+    //   state.card1 = ""
+    //   state.card2 = ""
+    // } else {
+    //   // no match, flip them back over
+
+    //   state.card1 = ""
+    //   state.card2 = ""
+    // }
+  }
+
+  console.log(state)
+
+  e.preventDefault()
+  // if (card1) {
+  //   card2 = $(this)
+  //   if (card1.find(".front").html() === card2.find(".front").html()) {
+  //   } else {
+  //     card1.flip()
+  //     card2.flip()
+  //   }
+  // } else {
+  //   card1 = $(this)
+  // }
+})
+
+// const state = {
+//   num1: ""
+//   num2: ""
+
+// }
+
+// $("#memory").on(flip(), function(e) {
+// e.preventDefault()
+
+// var val = $(this).html()
+// if (card1.val === card2.val) {
+// }
+// else {
+//   $("card1").flip() $("card2").flip()
+// }
+// }
+// )
+
+// Establish values for the cards
+
+// When 2 cards are clicked/flipped, if their value is the same leave them flipped to the front. If their value is different, flip them back over.
+
+// Set a number of turns the player gets. If they run out of turns, show them a losing screen.
+
+// If they win, show them a 'You won' screen.
