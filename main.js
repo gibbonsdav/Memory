@@ -59,8 +59,9 @@
 //   $("#card-9").flip()
 // })
 
+// we create a variable called cards. It corresponds with the individual cards created in html, and we turn those into an array
 var cards = $(".card").toArray()
-
+// we make a function to shuffle them
 function shuffle(array) {
   var currentIndex = array.length,
     temporaryValue,
@@ -96,6 +97,10 @@ $("#memory").on("click", ".card", function(e) {
     state.card1 = $(this)
   } else {
     state.card2 = $(this)
+    // if ((card1.data("value") = card2.data("value"))) {
+    //   state.card1.flip(false)
+    //   state.card2.flip(false)
+    // }
 
     console.log(state)
 
@@ -103,34 +108,53 @@ $("#memory").on("click", ".card", function(e) {
       state.card1.flip(false)
       state.card2.flip(false)
     }, 1000)
-
-    // if (state.card1 === state.card2) {
-    //   // we have a match
-
-    //   state.card1 = ""
-    //   state.card2 = ""
-    // } else {
-    //   // no match, flip them back over
-
-    //   state.card1 = ""
-    //   state.card2 = ""
-    // }
+    card1.off(".flip").click(false)
+    card2.off(".flip").click(false)
+    // state.card1 = null
+    // state.card2 = null
   }
-
-  console.log(state)
-
-  e.preventDefault()
-  // if (card1) {
-  //   card2 = $(this)
-  //   if (card1.find(".front").html() === card2.find(".front").html()) {
-  //   } else {
-  //     card1.flip()
-  //     card2.flip()
-  //   }
-  // } else {
-  //   card1 = $(this)
-  // }
 })
+
+// let hasflippedcard = false;
+// let firstcard, secondcard;
+
+// if (card1.data)
+
+// $("#card").flip({
+//   axis: "x",
+//   trigger: card1 != card2
+// })
+
+// if (card1 === card2) {
+//   state.card1.flip(false)
+//   state.card2.flip(false)
+// }
+
+// if (state.card1 === state.card2) {
+//   // we have a match
+
+//   state.card1 = ""
+//   state.card2 = ""
+// } else {
+//   // no match, flip them back over
+
+//   state.card1 = ""
+//   state.card2 = ""
+// }
+
+// console.log(state)
+
+// e.preventDefault()
+// if (card1) {
+//   card2 = $(this)
+//   if (card1.find(".front").html() === card2.find(".front").html()) {
+//   } else {
+//     card1.flip()
+//     card2.flip()
+//   }
+// } else {
+//   card1 = $(this)
+// }
 
 // const state = {
 //   num1: ""

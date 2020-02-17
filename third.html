@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="third.css" />
+    <title>Star Wars Game</title>
+  </head>
+  <body>
+    <h1 class="page-title">Star Wars Game</h1>
+    <div class="overlay-text visible">Click to Begin</div>
+    <div id="game-over-text" class="overlay-text">
+      GAME OVER
+      <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+      YOU WIN!
+      <span class="overlay-text-small">Click to restart</span>
+    </div>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">Time <span id="time-remaining">100</span></div>
+        <div class="game-info">Time <span id="flips">0</span></div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/chewy.jpg" alt="chewy" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/chewy.jpg" alt="chewy" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/yoda.jpg" alt="yoda" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/yoda.jpg" alt="yoda" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/luke.jpg" alt="luke" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/luke.jpg" alt="luke" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            class="card-value"
+            src="assets/darthvader.jpg"
+            alt="darthvader"
+          />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            class="card-value"
+            src="assets/darthvader.jpg"
+            alt="darthvader"
+          />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            class="card-value"
+            src="assets/palapatine.jpg"
+            alt="palapatine"
+          />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img
+            class="card-value"
+            src="assets/palapatine.jpg"
+            alt="palapatine"
+          />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/hansolo.jpg" alt="hansolo" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/hansolo.jpg" alt="hansolo" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/leia.jpg" alt="leia" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/leia.jpg" alt="leia" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/r2.jpg" alt="r2" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/r2.jpg" alt="r2" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/c3po.jpg" alt="c3po" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back card-face">
+          <img class="starwars" src="assets/starwars.jpg" alt="starwars" />
+        </div>
+        <div class="card-front card-face">
+          <img class="card-value" src="assets/c3po.jpg" alt="c3po" />
+        </div>
+      </div>
+    </div>
+
+    <script src="third.js" async></script>
+  </body>
+</html>
