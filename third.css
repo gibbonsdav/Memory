@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(blue, lime);
+  background: lightgrey;
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 .page-title {
   color: white;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .game-info {
@@ -31,7 +31,7 @@ html {
 .game-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  grid-gap: 10px;
+
   margin: 50px;
   justify-content: center;
   perspective: 500px;
@@ -39,9 +39,10 @@ html {
 
 .card {
   background-color: black;
-  height: 175px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
   position: relative;
+  border: solid 5px chartreuse;
 }
 
 .card-face {
@@ -104,20 +105,20 @@ overlay-text-small {
 
 .card-front {
   transform: rotateY(180deg);
-  background: white;
+  background: blue;
 }
 
 .starwars {
   height: 100px;
   width: 100px;
-  align-self: flex-start;
+  align-self: center;
   position: relative;
 }
 
 .card-value {
-  height: 100px;
-  width: 100px;
-  align-self: flex-start;
+  height: 125px;
+  width: 125px;
+  align-self: center;
   position: relative;
 }
 
