@@ -86,33 +86,50 @@ $("#memory")
   .flip()
 
 const state = {
-  card1: null,
-  card2: null
+  card1: "",
+  card2: ""
 }
 
 $("#memory").on("click", ".card", function(e) {
-  console.log($(this).data("value"))
-
-  if (state.card1 === null) {
+  //$(this).data("value")
+  $(this).addClass("flipped")
+  if (state.card1 === "") {
     state.card1 = $(this)
   } else {
     state.card2 = $(this)
-    // if ((card1.data("value") = card2.data("value"))) {
-    //   state.card1.flip(false)
-    //   state.card2.flip(false)
-    // }
-
-    console.log(state)
-
-    setTimeout(() => {
-      state.card1.flip(false)
-      state.card2.flip(false)
-    }, 1000)
-    card1.off(".flip").click(false)
-    card2.off(".flip").click(false)
-    // state.card1 = null
-    // state.card2 = null
   }
+  setTimeout(() => {
+    if (
+      state.card1.data("value") === state.card2.data("value") &&
+      state.card1 !== "" &&
+      state.card2 !== ""
+    ) {
+      $(this)
+        .removeClass("flipped")
+        .addClass("match")
+      $(this)
+        .siblings()
+        .find("+ .flipped")
+        .removeClass("flipped")
+        .addClass("match")
+    } else if (
+      state.card1.data("value") !== state.card2.data("value") &&
+      state.card1 !== "" &&
+      state.card2 !== ""
+    ) {
+      $(".match").off(".flip")
+    }
+  }, 100)
+  // console.log(state)
+
+  // setTimeout(() => {
+  //   state.card1.flip(false)
+  //   state.card2.flip(false)
+  // }, 1000)
+  // card1.off(".flip").click(false)
+  // card2.off(".flip").click(false)
+  // state.card1 = null
+  // state.card2 = null
 })
 
 // let hasflippedcard = false;
